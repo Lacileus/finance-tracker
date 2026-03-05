@@ -17,7 +17,6 @@ export function Header() {
           <NavItem key={item.href} href={item.href} icon={item.icon} />
         ))}
       </nav>
-
     </header>
   );
 }

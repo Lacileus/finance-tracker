@@ -22,11 +22,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${jetbrainsMono.variable} antialiased dark flex flex-col min-h-[calc(100vh-var(--header-height))]`}
+        className={`${jetbrainsMono.variable} dark flex min-h-[calc(100vh-var(--header-height))] flex-col antialiased`}
       >
         <Providers>
           <Header />
-          <main className="main flex-1 flex flex-col">{children}</main>
+          <main className="main flex flex-1 flex-col">{children}</main>
         </Providers>
       </body>
     </html>

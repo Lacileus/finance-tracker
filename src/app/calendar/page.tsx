@@ -76,8 +76,8 @@ export default function CalendarPage() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center flex-1 gap-4">
-      <div className="w-200 grid grid-cols-7 gap-1">
+    <div className="flex flex-1 flex-col items-center justify-center gap-4">
+      <div className="grid w-200 grid-cols-7 gap-1">
         {WEEKDAYS.map((day) => (
           <div key={day} className="text-center">
             {day}
@@ -98,7 +98,7 @@ export default function CalendarPage() {
             <div
               key={dateStr}
               className={[
-                'relative flex items-center justify-center border-2 rounded-sm aspect-square cursor-pointer',
+                'relative flex aspect-square cursor-pointer items-center justify-center rounded-sm border-2',
                 hasExpenses ? 'bg-card' : '',
                 isToday(day) ? 'border-primary' : '',
               ].join(' ')}
@@ -106,7 +106,7 @@ export default function CalendarPage() {
             >
               <span
                 className={[
-                  'absolute top-2 left-2 ',
+                  'absolute top-2 left-2',
                   isToday(day) ? 'text-primary' : 'text-accent',
                 ].join(' ')}
               >
@@ -118,7 +118,7 @@ export default function CalendarPage() {
         })}
       </div>
       <h1>Итого {totalByMonth[format(currentDate, 'yyyy-MM')] || 0} Р</h1>
-      <div className="absolute bottom-4 flex gap-4 items-center">
+      <div className="absolute bottom-4 flex items-center gap-4">
         <Button
           className="cursor-pointer"
           size="icon-lg"

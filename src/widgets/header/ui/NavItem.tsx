@@ -12,13 +12,13 @@ interface NavItemProps {
 
 export function NavItem({ href, icon: Icon }: NavItemProps) {
   const pathname = usePathname();
-const router = useRouter();
+  const router = useRouter();
 
   const isActive = pathname === href;
 
   return (
-    <Button onClick={() => router.push(href)} variant="ghost" className='size-10 cursor-pointer'>
-        <Icon className={`size-6 ${isActive ? 'text-primary' : 'text-accent'}`} />
+    <Button onClick={() => router.push(href)} variant="ghost" className="size-10 cursor-pointer">
+      <Icon className={`size-6 ${isActive ? 'text-primary' : 'text-accent'}`} />
     </Button>
   );
 }

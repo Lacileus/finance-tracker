@@ -46,9 +46,9 @@ export default function AddExpensePage({ params }: { params: Promise<{ date: str
     <div className="flex flex-1 items-center justify-center">
       <form
         onSubmit={handleSubmit}
-        className="w-150 p-8 flex flex-col gap-10 rounded-4xl border-2 bg-card"
+        className="bg-card flex w-150 flex-col gap-10 rounded-4xl border-2 p-8"
       >
-        <div className="grid grid-cols-3 gap-4 content-center">
+        <div className="grid grid-cols-3 content-center gap-4">
           <Field>
             <FieldLabel htmlFor="amount">Сумма, ₽</FieldLabel>
             <Input value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Сумма" />

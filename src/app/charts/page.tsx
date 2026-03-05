@@ -25,7 +25,7 @@ export default function ChartsPage() {
 
   return (
     <div className="flex flex-1 items-center justify-center">
-      <ChartContainer config={chartConfig} className="p-6 border-2 rounded-4xl min-h-50 w-3/4">
+      <ChartContainer config={chartConfig} className="min-h-50 w-3/4 rounded-4xl border-2 p-6">
         <BarChart accessibilityLayer data={expenses}>
           <XAxis
             dataKey="date"

@@ -17,7 +17,7 @@ export function YDatePicker({ date, setDate }: YDatePickerProps) {
         <Button
           variant="outline"
           id="date-picker-simple"
-          className="justify-start font-normal rounded-full"
+          className="justify-start rounded-full font-normal"
         >
           <span>{date ? format(date, 'dd MMM yyyy') : 'Pick a date'}</span>
         </Button>

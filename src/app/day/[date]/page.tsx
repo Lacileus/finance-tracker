@@ -28,9 +28,9 @@ export default function DayPage({ params }: { params: Promise<{ date: string }> 
   const { getLabel } = useCategories();
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center">
-      <div className="w-200 border-2 rounded-3xl bg-card overflow-hidden">
-        <div className="flex justify-between items-center m-6">
+    <div className="flex flex-1 flex-col items-center justify-center">
+      <div className="bg-card w-200 overflow-hidden rounded-3xl border-2">
+        <div className="m-6 flex items-center justify-between">
           <div className="flex flex-col gap-4">
             <Button className="w-30" size="sm" variant="ghost" onClick={() => router.back()}>
               <ArrowLeftIcon />
@@ -67,7 +67,7 @@ export default function DayPage({ params }: { params: Promise<{ date: string }> 
                   <TableRow key={expense.id}>
                     <TableCell className="text-center">{expense.amount}</TableCell>
                     <TableCell className="text-center">{getLabel(expense.category)}</TableCell>
-                    <TableCell className="text-center truncate">{expense.description}</TableCell>
+                    <TableCell className="truncate text-center">{expense.description}</TableCell>
                     <TableCell>
                       <Button
                         variant="ghost"

@@ -91,7 +91,7 @@ function ExpensesContent() {
       ) : filtered.length === 0 ? (
         <p>Нет расходов в категории «{getLabel(filterCategory)}».</p>
       ) : (
-        <div className="flex flex-col gap-4 items-center py-4 border-2 rounded-4xl">
+        <div className="flex flex-col items-center gap-4 rounded-4xl border-2 py-4">
           {grouped.map(({ date, expenses, total }) => (
             <Fragment key={date}>
               <h1>{date}</h1>
@@ -129,9 +129,9 @@ function ExpensesContent() {
                   className={
                     total > 30000
                       ? total > 40000
-                        ? 'text-red-500 border-t-red-500'
-                        : 'text-yellow-500 border-t-yellow-500'
-                      : 'text-lime-600 border-t-lime-600'
+                        ? 'border-t-red-500 text-red-500'
+                        : 'border-t-yellow-500 text-yellow-500'
+                      : 'border-t-lime-600 text-lime-600'
                   }
                 >
                   <TableRow>
